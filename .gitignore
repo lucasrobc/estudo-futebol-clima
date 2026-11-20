@@ -221,3 +221,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Projeto estudo-futebol-clima
+# Dados baixados em execuções locais (o bruto oficial fica no Volume do Databricks)
+data/
