@@ -27,11 +27,15 @@ STADIUMS_SCHEMA = StructType([
 
 
 def run_sql_file(spark: SparkSession, path: Path, settings: Settings) -> None:
+    """ Lê um arquivo .sql, troca {catalog} e {schema} e executa no Spark """
+
     query = path.read_text(encoding="utf-8").format(catalog=settings.catalog, schema=settings.schema)
     spark.sql(query)
 
 
 def load_stadiums_table(spark: SparkSession, settings: Settings) -> None:
+    """ Grava a tabela de referência CSV do repositório como silver_estadios, já tipada """
+
     rows = [
         (
             int(r["team_id"]), r["time"], r["estadio"], r["cidade_id"], r["cidade"], r["uf"],
