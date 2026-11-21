@@ -225,3 +225,6 @@ __marimo__/
 # Projeto estudo-futebol-clima
 # Dados baixados em execuções locais (o bruto oficial fica no Volume do Databricks)
 data/
+
+# Estado local da Databricks CLI / Asset Bundles
+.databricks/

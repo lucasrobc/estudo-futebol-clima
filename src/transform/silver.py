@@ -50,6 +50,8 @@ def load_stadiums_table(spark: SparkSession, settings: Settings) -> None:
 
 
 def build_silver(spark: SparkSession, settings: Settings) -> dict[str, int]:
+    """ Cria todas as tabelas Silver e devolve a contagem de linhas de cada uma """
+
     load_stadiums_table(spark, settings)
     tables = ["silver_estadios"]
     for table in SILVER_TABLES:
