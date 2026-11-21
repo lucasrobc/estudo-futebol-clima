@@ -1,0 +1,338 @@
+{
+  "projeto": "estudo-futebol-clima",
+  "gerado_em_utc": "2026-11-21T21:57:07+00:00",
+  "temporada": 2026,
+  "status": "APROVADO",
+  "resumo": {
+    "checks": 22,
+    "aprovados": 22,
+    "erros": 0,
+    "avisos": 0
+  },
+  "linhas_por_tabela": {
+    "bronze_times": 1,
+    "bronze_partidas": 38,
+    "bronze_clima": 11,
+    "silver_estadios": 20,
+    "silver_times": 20,
+    "silver_partidas": 380,
+    "silver_arbitros": 215,
+    "silver_clima_diario": 3256,
+    "gold_partidas_clima": 380,
+    "gold_resumo_clima": 11
+  },
+  "checks": [
+    {
+      "tabela": "gold_partidas_clima",
+      "check": "schema",
+      "aprovado": true,
+      "severidade": "ERRO",
+      "coluna": null,
+      "detalhes": {
+        "colunas_verificadas": 18,
+        "faltando": [],
+        "tipo_diferente": {}
+      }
+    },
+    {
+      "tabela": "gold_partidas_clima",
+      "check": "contagem_linhas",
+      "aprovado": true,
+      "severidade": "ERRO",
+      "coluna": null,
+      "detalhes": {
+        "esperado": 380,
+        "encontrado": 380
+      }
+    },
+    {
+      "tabela": "gold_partidas_clima",
+      "check": "unicidade",
+      "aprovado": true,
+      "severidade": "ERRO",
+      "coluna": "partida_id",
+      "detalhes": {
+        "chaves_duplicadas": 0
+      }
+    },
+    {
+      "tabela": "silver_clima_diario",
+      "check": "unicidade",
+      "aprovado": true,
+      "severidade": "ERRO",
+      "coluna": "cidade_id, data",
+      "detalhes": {
+        "chaves_duplicadas": 0
+      }
+    },
+    {
+      "tabela": "silver_estadios",
+      "check": "unicidade",
+      "aprovado": true,
+      "severidade": "ERRO",
+      "coluna": "team_id",
+      "detalhes": {
+        "chaves_duplicadas": 0
+      }
+    },
+    {
+      "tabela": "gold_partidas_clima",
+      "check": "null_ratio",
+      "aprovado": true,
+      "severidade": "ERRO",
+      "coluna": "partida_id",
+      "detalhes": {
+        "null_ratio": 0.0,
+        "limite": 0.0,
+        "linhas": 380,
+        "filtro": null
+      }
+    },
+    {
+      "tabela": "gold_partidas_clima",
+      "check": "null_ratio",
+      "aprovado": true,
+      "severidade": "ERRO",
+      "coluna": "data_partida",
+      "detalhes": {
+        "null_ratio": 0.0,
+        "limite": 0.0,
+        "linhas": 380,
+        "filtro": null
+      }
+    },
+    {
+      "tabela": "gold_partidas_clima",
+      "check": "null_ratio",
+      "aprovado": true,
+      "severidade": "ERRO",
+      "coluna": "mandante_id",
+      "detalhes": {
+        "null_ratio": 0.0,
+        "limite": 0.0,
+        "linhas": 380,
+        "filtro": null
+      }
+    },
+    {
+      "tabela": "gold_partidas_clima",
+      "check": "null_ratio",
+      "aprovado": true,
+      "severidade": "ERRO",
+      "coluna": "visitante_id",
+      "detalhes": {
+        "null_ratio": 0.0,
+        "limite": 0.0,
+        "linhas": 380,
+        "filtro": null
+      }
+    },
+    {
+      "tabela": "gold_partidas_clima",
+      "check": "null_ratio",
+      "aprovado": true,
+      "severidade": "ERRO",
+      "coluna": "cidade_id",
+      "detalhes": {
+        "null_ratio": 0.0,
+        "limite": 0.0,
+        "linhas": 380,
+        "filtro": null
+      }
+    },
+    {
+      "tabela": "gold_partidas_clima",
+      "check": "null_ratio",
+      "aprovado": true,
+      "severidade": "ERRO",
+      "coluna": "gols_mandante",
+      "detalhes": {
+        "null_ratio": 0.0,
+        "limite": 0.0,
+        "linhas": 350,
+        "filtro": "encerrada"
+      }
+    },
+    {
+      "tabela": "gold_partidas_clima",
+      "check": "null_ratio",
+      "aprovado": true,
+      "severidade": "ERRO",
+      "coluna": "gols_visitante",
+      "detalhes": {
+        "null_ratio": 0.0,
+        "limite": 0.0,
+        "linhas": 350,
+        "filtro": "encerrada"
+      }
+    },
+    {
+      "tabela": "gold_partidas_clima",
+      "check": "null_ratio",
+      "aprovado": true,
+      "severidade": "AVISO",
+      "coluna": "temp_max_c",
+      "detalhes": {
+        "null_ratio": 0.0,
+        "limite": 0.0,
+        "linhas": 350,
+        "filtro": "encerrada"
+      }
+    },
+    {
+      "tabela": "gold_partidas_clima",
+      "check": "null_ratio",
+      "aprovado": true,
+      "severidade": "AVISO",
+      "coluna": "precipitacao_mm",
+      "detalhes": {
+        "null_ratio": 0.0,
+        "limite": 0.0,
+        "linhas": 350,
+        "filtro": "encerrada"
+      }
+    },
+    {
+      "tabela": "gold_partidas_clima",
+      "check": "intervalo",
+      "aprovado": true,
+      "severidade": "ERRO",
+      "coluna": "gols_mandante",
+      "detalhes": {
+        "permitido": [
+          "0",
+          "15"
+        ],
+        "encontrado": [
+          "0",
+          "6"
+        ],
+        "fora_do_intervalo": 0
+      }
+    },
+    {
+      "tabela": "gold_partidas_clima",
+      "check": "intervalo",
+      "aprovado": true,
+      "severidade": "ERRO",
+      "coluna": "gols_visitante",
+      "detalhes": {
+        "permitido": [
+          "0",
+          "15"
+        ],
+        "encontrado": [
+          "0",
+          "5"
+        ],
+        "fora_do_intervalo": 0
+      }
+    },
+    {
+      "tabela": "gold_partidas_clima",
+      "check": "intervalo",
+      "aprovado": true,
+      "severidade": "ERRO",
+      "coluna": "rodada",
+      "detalhes": {
+        "permitido": [
+          "1",
+          "38"
+        ],
+        "encontrado": [
+          "1",
+          "38"
+        ],
+        "fora_do_intervalo": 0
+      }
+    },
+    {
+      "tabela": "gold_partidas_clima",
+      "check": "intervalo",
+      "aprovado": true,
+      "severidade": "ERRO",
+      "coluna": "data_partida",
+      "detalhes": {
+        "permitido": [
+          "2026-01-01",
+          "2026-12-31"
+        ],
+        "encontrado": [
+          "2026-01-28",
+          "2026-12-02"
+        ],
+        "fora_do_intervalo": 0
+      }
+    },
+    {
+      "tabela": "silver_clima_diario",
+      "check": "intervalo",
+      "aprovado": true,
+      "severidade": "ERRO",
+      "coluna": "temp_max_c",
+      "detalhes": {
+        "permitido": [
+          "-10",
+          "50"
+        ],
+        "encontrado": [
+          "10.1",
+          "39.8"
+        ],
+        "fora_do_intervalo": 0
+      }
+    },
+    {
+      "tabela": "silver_clima_diario",
+      "check": "intervalo",
+      "aprovado": true,
+      "severidade": "ERRO",
+      "coluna": "temp_min_c",
+      "detalhes": {
+        "permitido": [
+          "-15",
+          "45"
+        ],
+        "encontrado": [
+          "0.6",
+          "26.3"
+        ],
+        "fora_do_intervalo": 0
+      }
+    },
+    {
+      "tabela": "silver_clima_diario",
+      "check": "intervalo",
+      "aprovado": true,
+      "severidade": "ERRO",
+      "coluna": "precipitacao_mm",
+      "detalhes": {
+        "permitido": [
+          "0",
+          "500"
+        ],
+        "encontrado": [
+          "0.0",
+          "74.7"
+        ],
+        "fora_do_intervalo": 0
+      }
+    },
+    {
+      "tabela": "gold_partidas_clima",
+      "check": "valores_aceitos",
+      "aprovado": true,
+      "severidade": "ERRO",
+      "coluna": "resultado",
+      "detalhes": {
+        "aceitos": [
+          "MANDANTE",
+          "EMPATE",
+          "VISITANTE",
+          "A_DEFINIR"
+        ],
+        "invalidos": []
+      }
+    }
+  ]
+}
