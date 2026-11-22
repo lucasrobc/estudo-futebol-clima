@@ -1,3 +1,4 @@
+# PySpark não está aqui porque é fornecido pelo runtime do Databricks (serverless, Python 3.12).
 requests==2.32.3
 python-dotenv==1.0.1
 pytest==8.3.3
