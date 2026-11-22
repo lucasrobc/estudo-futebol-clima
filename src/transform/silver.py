@@ -27,11 +27,15 @@ STADIUMS_SCHEMA = StructType([
 
 
 def run_sql_file(spark: SparkSession, path: Path, settings: Settings) -> None:
+    """ Lê um arquivo .sql, troca {catalog} e {schema} e executa no Spark """
+
     query = path.read_text(encoding="utf-8").format(catalog=settings.catalog, schema=settings.schema)
     spark.sql(query)
 
 
 def load_stadiums_table(spark: SparkSession, settings: Settings) -> None:
+    """ Grava a tabela de referência CSV do repositório como silver_estadios, já tipada """
+
     rows = [
         (
             int(r["team_id"]), r["time"], r["estadio"], r["cidade_id"], r["cidade"], r["uf"],
@@ -46,6 +50,8 @@ def load_stadiums_table(spark: SparkSession, settings: Settings) -> None:
 
 
 def build_silver(spark: SparkSession, settings: Settings) -> dict[str, int]:
+    """ Cria todas as tabelas Silver e devolve a contagem de linhas de cada uma """
+
     load_stadiums_table(spark, settings)
     tables = ["silver_estadios"]
     for table in SILVER_TABLES:

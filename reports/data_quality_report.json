@@ -1,13 +1,13 @@
 {
   "projeto": "estudo-futebol-clima",
-  "gerado_em_utc": "2026-11-21T21:57:07+00:00",
+  "gerado_em_utc": "2026-11-21T23:24:30+00:00",
   "temporada": 2026,
   "status": "APROVADO",
   "resumo": {
     "checks": 22,
-    "aprovados": 22,
+    "aprovados": 20,
     "erros": 0,
-    "avisos": 0
+    "avisos": 2
   },
   "linhas_por_tabela": {
     "bronze_times": 1,
@@ -16,7 +16,7 @@
     "silver_estadios": 20,
     "silver_times": 20,
     "silver_partidas": 380,
-    "silver_arbitros": 215,
+    "silver_arbitros": 218,
     "silver_clima_diario": 3256,
     "gold_partidas_clima": 380,
     "gold_resumo_clima": 11
@@ -149,7 +149,7 @@
       "detalhes": {
         "null_ratio": 0.0,
         "limite": 0.0,
-        "linhas": 350,
+        "linhas": 352,
         "filtro": "encerrada"
       }
     },
@@ -162,33 +162,33 @@
       "detalhes": {
         "null_ratio": 0.0,
         "limite": 0.0,
-        "linhas": 350,
+        "linhas": 352,
         "filtro": "encerrada"
       }
     },
     {
       "tabela": "gold_partidas_clima",
       "check": "null_ratio",
-      "aprovado": true,
+      "aprovado": false,
       "severidade": "AVISO",
       "coluna": "temp_max_c",
       "detalhes": {
-        "null_ratio": 0.0,
+        "null_ratio": 0.0057,
         "limite": 0.0,
-        "linhas": 350,
+        "linhas": 352,
         "filtro": "encerrada"
       }
     },
     {
       "tabela": "gold_partidas_clima",
       "check": "null_ratio",
-      "aprovado": true,
+      "aprovado": false,
       "severidade": "AVISO",
       "coluna": "precipitacao_mm",
       "detalhes": {
-        "null_ratio": 0.0,
+        "null_ratio": 0.0057,
         "limite": 0.0,
-        "linhas": 350,
+        "linhas": 352,
         "filtro": "encerrada"
       }
     },
@@ -334,5 +334,39 @@
         "invalidos": []
       }
     }
-  ]
+  ],
+  "execucao": {
+    "extracao": {
+      "partidas": {
+        "baixadas": 3,
+        "puladas": 35
+      },
+      "clima": {
+        "baixadas": [
+          "rio_de_janeiro",
+          "belo_horizonte",
+          "porto_alegre",
+          "curitiba",
+          "sao_paulo",
+          "chapeco",
+          "salvador",
+          "braganca_paulista",
+          "belem",
+          "mirassol",
+          "santos"
+        ],
+        "recusadas": []
+      },
+      "periodo_clima": [
+        "2026-01-28",
+        "2026-11-19"
+      ]
+    },
+    "tempo_por_etapa_s": {
+      "Extração (APIs → Volume raw)": 6.5,
+      "Bronze": 13.0,
+      "Silver": 11.7,
+      "Gold": 5.0
+    }
+  }
 }

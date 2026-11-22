@@ -1,0 +1,23 @@
+# Databricks Asset Bundle
+# Uso: ./run.sh
+bundle:
+  name: estudo-futebol-clima
+
+resources:
+  jobs:
+    pipeline_futebol_clima:
+      name: pipeline-futebol-clima
+      tasks:
+        - task_key: setup_unity_catalog
+          notebook_task:
+            notebook_path: ./notebooks/01_setup_unity_catalog.ipynb
+        - task_key: pipeline_completo
+          depends_on:
+            - task_key: setup_unity_catalog
+          notebook_task:
+            notebook_path: ./notebooks/99_run_pipeline.ipynb
+
+targets:
+  dev:
+    mode: development
+    default: true

@@ -1,0 +1,3 @@
+# Scripts shell sempre com quebra de linha LF.
+# Evitar falha no bash com "$'\r': command not found".
+*.sh text eol=lf
